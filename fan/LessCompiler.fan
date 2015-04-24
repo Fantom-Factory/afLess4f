@@ -12,8 +12,6 @@ class LessCompiler {
 		compiler := ThreadUnsafeLessCompiler()
 		result	 := compiler.compile(Interop.toJava(lessIn.normalize), Configuration().setCompressing(compress))
 		
-		echo(result.getCss)
-		
 		Interop.toFan(result.getWarnings).each |Obj o| {
 			p := (Problem) o	// TODO: log fantom
 			echo("WARNING ${p.getLine}:${p.getCharacter} ${p.getMessage}")
