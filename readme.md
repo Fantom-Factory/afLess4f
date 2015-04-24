@@ -10,7 +10,7 @@
 
 `Less4f` is a wrapper around [Less4j 1.11.0](https://github.com/SomMeri/less4j) - a pure Java compiler for Less.
 
-Less4f is a simple command line utility program for compiling `.less` files into CSS.
+Less4f is a simple command line utility program for compiling `.less` files into `.css` files.
 
 ## Install
 
@@ -28,11 +28,18 @@ Full API & fandocs are available on the [Status302 repository](http://repo.statu
 
 ## Quick Start
 
-1). Once installed, run `Less4f` from the command line:
+Once installed, run `Less4f` from the command line:
 
 ```
-C:\> fan afLess4f
+C:\> fan afLess4j [-x] <lessIn> <cssOut>
+```
 
+Where `lessIn` and `cssOut` are files. OS dependent and / or URI notation may be used. Example:
+
+```
+C:\> fan afLess4j -x C:\projects\website.less C:\projects\website.css
+
+C:\> fan afLess4j -x file:/C:/projects/website.less file:/C:/projects/website.css
 ```
 
 ## Dependencies
