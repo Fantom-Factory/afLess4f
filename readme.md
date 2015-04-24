@@ -10,7 +10,7 @@
 
 `Less4f` is a wrapper around [Less4j 1.11.0](https://github.com/SomMeri/less4j) - a pure Java compiler for Less.
 
-Less4f is a simple command line utility program for compiling `.less` files into `.css` files.
+Less4f is a simple command line utility program for compiling `.less` files into `.css` files. It was created for compiling [Twitter Bootstrap](http://getbootstrap.com/) templates and has been successfully tested with Bootstrap v3.3.4.
 
 ## Install
 
