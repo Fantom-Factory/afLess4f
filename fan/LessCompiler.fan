@@ -10,13 +10,15 @@ class LessCompiler {
 	Void compile(File lessIn, File cssOut, Bool compress) {
 				
 		compiler := ThreadUnsafeLessCompiler()
-		result	 := compiler.compile(Interop.toJava(lessIn), Configuration().setCompressing(compress))
+		result	 := compiler.compile(Interop.toJava(lessIn.normalize), Configuration().setCompressing(compress))
+		
+		echo(result.getCss)
 		
 		Interop.toFan(result.getWarnings).each |Obj o| {
 			p := (Problem) o	// TODO: log fantom
 			echo("WARNING ${p.getLine}:${p.getCharacter} ${p.getMessage}")
 		}
 
-		cssOut.out.writeChars(result.getCss)
+		cssOut.out.writeChars(result.getCss).close
 	}
 }
