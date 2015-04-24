@@ -1,0 +1,54 @@
+Overview [#overview]
+********************
+'Less4f' is a wrapper around [Less4j 1.11.0]`https://github.com/SomMeri/less4j` - a pure Java compiler for Less.
+
+Less4f is a simple command line utility program for compiling '.less' files into CSS.
+
+
+
+Install [#Install]
+******************
+Install '@{project.name}' with the Fantom Repository Manager ( [fanr]`docFanr::Tool.install` ):
+
+  C:\> fanr install -r http://repo.status302.com/fanr/ @{pod.name}
+
+To use in a [Fantom]`http://fantom.org/` project, add a dependency to 'build.fan':
+
+  depends = ["sys 1.0", ..., "@{pod.name} @{pod.version}+"]
+
+
+
+Documentation [#documentation]
+******************************
+Full API & fandocs are available on the [Status302 repository]`http://repo.status302.com/doc/@{pod.name}/#overview`.
+
+
+
+Quick Start [#quickStart]
+*************************
+1). Once installed, run 'Less4f' from the command line:
+pre>
+C:\> fan afLess4f
+
+<pre
+
+
+
+Dependencies [#dependencies]
+****************************
+'Less4f' is designed to be used a standalone application and as such, comes pre-bundled with the following jars:
+
+ - 'less4j-1.11.0.jar'
+ - 'antlr-runtime-3.5.2.jar'
+ - 'commons-beanutils-1.8.3.jar'
+ - 'commons-io-2.3.jar'
+ - 'commons-logging-1.1.1.jar'
+
+
+
+Release Notes [#releaseNotes]
+*****************************
+v0.0.2 [#v0.0.2]
+================
+ - New: Preview release.
+
