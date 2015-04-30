@@ -26,7 +26,7 @@ class Main : AbstractMain {
 		log := typeof.pod.log
 		
 		log.info("Compiling `${lessIn.normalize.osPath}` to `${cssOut.normalize.osPath}`")
-		LessCompiler().compile(lessIn, cssOut, compress)
+		LessCompiler().compileFile(lessIn, cssOut, compress)
 		log.info("Done.")
 		
 		return 0
