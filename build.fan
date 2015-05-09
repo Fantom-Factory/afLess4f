@@ -6,14 +6,14 @@ class Build : BuildPod {
 	new make() {
 		podName = "afLess4f"
 		summary = "A wrapper around Less4j 1.11.0 - a pure Java compiler for Less"
-		version = Version("0.0.1")
+		version = Version("0.0.2")
 
 		meta = [	
 			"proj.name"		: "efan",
 			"tags"			: "app, web",
 			"internal"		: "true",
 			"license.name"	: "Apache Licence, Version 2.0",
-			"repo.private"	: "true"
+			"repo.private"	: "false"
 		]
 
 		depends = [
@@ -21,7 +21,7 @@ class Build : BuildPod {
 			"util 1.0",
 		]
 
-		srcDirs = [`fan/`]
+		srcDirs = [`test/`, `fan/`]
 		resDirs = [,]
 
 		docApi = true
