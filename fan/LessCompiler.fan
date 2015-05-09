@@ -11,7 +11,8 @@ class LessCompiler {
 		compiler := ThreadUnsafeLessCompiler()
 		result	 := compiler.compile(Interop.toJava(lessIn.normalize), Configuration().setCompressing(compress))
 		
-		Interop.toFan(result.getWarnings).each |Problem p| {
+		Interop.toFan(result.getWarnings).each |Obj o| {
+			Problem p := o
 			echo("WARNING ${p.getLine}:${p.getCharacter} ${p.getMessage}")			
 		}
 
@@ -23,7 +24,8 @@ class LessCompiler {
 		compiler := ThreadUnsafeLessCompiler()
 		result	 := compiler.compile(lessIn, Configuration().setCompressing(compress))
 		
-		Interop.toFan(result.getWarnings).each |Problem p| {
+		Interop.toFan(result.getWarnings).each |Obj o| {
+			Problem p := o
 			echo("WARNING ${p.getLine}:${p.getCharacter} ${p.getMessage}")			
 		}
 
