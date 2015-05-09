@@ -9,7 +9,7 @@ class Build : BuildPod {
 		version = Version("0.0.3")
 
 		meta = [	
-			"proj.name"		: "efan",
+			"proj.name"		: "less4f",
 			"tags"			: "app, web",
 			"internal"		: "true",
 			"license.name"	: "Apache Licence, Version 2.0",
