@@ -6,14 +6,14 @@ class Build : BuildPod {
 	new make() {
 		podName = "afLess4f"
 		summary = "A wrapper around Less4j - the pure Java compiler for Less"
-		version = Version("0.0.2")
+		version = Version("0.0.3")
 
 		meta = [	
 			"proj.name"		: "less4f",
 			"repo.tags"		: "app, web",
 			"repo.internal"	: "true",
 			"license.name"	: "Apache Licence, Version 2.0",
-			"repo.public"	: "true"
+			"repo.public"	: "false"
 		]
 
 		depends = [
